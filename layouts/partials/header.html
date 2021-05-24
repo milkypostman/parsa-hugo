@@ -1,6 +1,6 @@
 <header class="navigation">
   <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="{{site.BaseURL}}"><img class="img-fluid" src="{{ site.Params.logo | absURL }}" alt="{{site.Title}}"></a>
+    <a class="navbar-brand text-uppercase" href="{{site.BaseURL}}">{{ site.Title }}</a>
     <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navogation"
       aria-controls="navogation" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -23,7 +23,7 @@
         </li>
         {{ else }}
         <li class="nav-item">
-          <a class="nav-link text-uppercase text-dark" href="{{ .URL | absURL }}">{{ .Name }}</a>
+          <a class="nav-link text-uppercase text-dark" href="{{ .URL | absURL }}" {{ if hasPrefix .URL "https://" }} target="_blank" {{ end }}>{{ .Name }}</a>
         </li>
         {{ end }}
         {{ end }}

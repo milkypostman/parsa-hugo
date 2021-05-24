@@ -9,12 +9,6 @@ VERSION:	Versoin Number
 -------------------------------------------------------------------*/
 /*  typography */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Playfair+Display:400,700");
-@font-face {
-  font-family: 'hanskendrick';
-  src: url("../fonts/hanskendrick-regular-webfont.woff") format("woff");
-  font-style: normal;
-  font-display: swap;
-}
 
 body {
   line-height: 1.5;
@@ -33,9 +27,16 @@ p, .paragraph {
 
 h1, h2, h3, h4, h5, h6 {
   color: #000000;
-  font-family: "hanskendrick";
   font-weight: 600;
   line-height: 1.2;
+}
+
+h2 {
+  margin-top: 50px;
+}
+
+.container {
+    margin-bottom: 20px;
 }
 
 h1, .h1 {
@@ -72,6 +73,12 @@ h5, .h5 {
 
 h6, .h6 {
   font-size: 16px;
+}
+
+.bottom-align-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 /* Button style */
@@ -235,8 +242,12 @@ body {
 
 ol,
 ul {
-  list-style-type: none;
+  /* list-style-type: none; */
   margin: 0px;
+}
+
+li !important {
+    margin: 0px;
 }
 
 img {
@@ -275,8 +286,8 @@ a.text-dark:hover {
 }
 
 .section {
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 
 .section-sm {
@@ -350,7 +361,6 @@ a.text-dark:hover {
 }
 
 .font-secondary {
-  font-family: "hanskendrick" !important;
 }
 
 .mb-10 {
@@ -584,7 +594,6 @@ textarea.form-control {
 }
 
 .pagination .page-item .page-link {
-  font-family: "hanskendrick";
   font-size: 30px;
   border: 0;
   color: #585757;
@@ -807,7 +816,7 @@ blockquote {
   font-weight: 600;
 }
 
-.content * {
+.content ol, .content ul {
   margin-bottom: 20px;
 }
 
@@ -861,4 +870,8 @@ blockquote {
   height: 200px;
   width: 200px;
   object-fit: cover;
+}
+
+.w-33 {
+    width:33% !important
 }
